@@ -17,8 +17,7 @@ DECLARE @nameOfSchool varchar(50) =  CHOOSE(@num, 'Maktab','Nehzat','Danesh','Sa
 DECLARE @Gender bit = ROUND(RAND(),0);
 DECLARE @GPA FLOAT ;
 DECLARE @Score FLOAT ;
-WHILE @i < 50 -- insert 100 rows.  change this value to whatever you want.
-BEGIN
+WHILE @i < 50 
 	
 	SET @GPA  = RAND()*20;
 	SET @Score  = RAND()*100;
@@ -37,14 +36,14 @@ END
 --SELECT FirstName,LastName,LevelOFEducation,GPA FROM dbo.Student;
 --SELECT FirstName,LastName,GPA FROM dbo.Student
 --WHERE GPA <12;
-UPDATE dbo.Student SET Score = 0;
---SELECT * FROM dbo.Student
+--UPDATE dbo.Student SET Score = 0;
+--SELECT Schoolname FROM dbo.Student
 --WHERE LevelOFEducation IN (10,11,12) AND GPA  >= 18 AND GPA <=19;
-UPDATE  dbo.Student SET Score = 1
-WHERE LevelOFEducation IN (10,11,12) AND GPA  >= 18 AND GPA <=19;
+--UPDATE  dbo.Student SET Score = 1
+--WHERE LevelOFEducation IN (10,11,12) AND GPA  >= 18 AND GPA <=19;
 --SELECT * FROM dbo.Student
 --WHERE LevelOFEducation = 9  AND Gender = 0 
 --AND FirstName IN ('Reza','Ali');
-DELETE dbo.Student
-WHERE Score = 0 AND LevelOFEducation < 12;
-SELECT * FROM dbo.Student;
+--DELETE dbo.Student
+--WHERE Score = 0 AND LevelOFEducation < 12;
+--SELECT * FROM dbo.Student;
