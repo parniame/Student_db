@@ -1,2 +1,2 @@
 # Student Database
-create student table,with Simple Queries
+Create student table,with Simple Queries
